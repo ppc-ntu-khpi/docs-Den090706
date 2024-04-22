@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Module10">
+  <ClassDiagramComponents>
+    <Class name="Artist" package="" visibility="public" xPosition="179.0" yPosition="104.0">
+      <Fields>
+        <Field name="skiils" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String[]" name="skiils"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="jobTitle"/>
+          <Argument type="int" name="level"/>
+          <Argument type="String" name="dept"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String[]" name="skiils"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getSkills" returnType="String" visibility="public"/>
+        <Method name="setSkills" returnType="void" visibility="public">
+          <Argument type="String[]" name="skills"/>
+        </Method>
+        <Method name="getSkillsLSist" returnType="String[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Editor" package="" visibility="public" xPosition="179.0" yPosition="483.0">
+      <Fields>
+        <Field name="electronicEditing" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="electronicEditing"/>
+          <Argument type="String[]" name="skiils"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="jobTitle"/>
+          <Argument type="int" name="level"/>
+          <Argument type="String" name="dept"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="electronicEditing"/>
+          <Argument type="String[]" name="skiils"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="electronicEditing"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getPreferences" returnType="boolean" visibility="public"/>
+        <Method name="setPreferences" returnType="void" visibility="public">
+          <Argument type="boolean" name="electronic"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="" visibility="public" xPosition="686.0" yPosition="41.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="jobTitle" type="String" visibility="private"/>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="level" type="int" visibility="private"/>
+        <Field name="dept" type="String" visibility="private"/>
+        <Field name="employeesCount" type="int" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="jobTitle"/>
+          <Argument type="int" name="level"/>
+          <Argument type="String" name="dept"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="setJobTitle" returnType="void" visibility="public">
+          <Argument type="String" name="job"/>
+        </Method>
+        <Method name="getJobTitle" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setLevel" returnType="void" visibility="public">
+          <Argument type="int" name="level"/>
+        </Method>
+        <Method name="getLevel" returnType="int" visibility="public"/>
+        <Method name="getDept" returnType="String" visibility="public"/>
+        <Method name="setDept" returnType="void" visibility="public">
+          <Argument type="String" name="dept"/>
+        </Method>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmployeesTest" package="" visibility="public" xPosition="771.0" yPosition="483.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GraphicIllustrator" package="" visibility="public" xPosition="179.0" yPosition="374.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Manager" package="" visibility="public" xPosition="1107.0" yPosition="189.0">
+      <Fields>
+        <Field name="employees" type="Employee[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Employee[]" name="employees"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="jobTitle"/>
+          <Argument type="int" name="level"/>
+          <Argument type="String" name="dept"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Employee[]" name="employees"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getEmployees" returnType="String" visibility="public"/>
+        <Method name="setEmployees" returnType="void" visibility="public">
+          <Argument type="Employee[]" name="employees"/>
+        </Method>
+        <Method name="getEmployeesList" returnType="Employee[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TechnicalWriter" package="" visibility="public" xPosition="478.0" yPosition="374.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Editor" target="Artist"/>
+    <IsRelation name="is" source="GraphicIllustrator" target="Artist"/>
+    <UseRelation source="Manager" target="Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Artist" target="Employee"/>
+    <IsRelation name="is" source="Manager" target="Employee"/>
+    <IsRelation name="is" source="TechnicalWriter" target="Artist"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
